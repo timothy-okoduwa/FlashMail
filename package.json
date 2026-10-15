@@ -1,15 +1,16 @@
 {
-  "name": "email-send",
+  "name": "flashmail",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:worker": "opennextjs-cloudflare build",
+    "deploy": "opennextjs-cloudflare build && wrangler deploy",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
-    "@google/genai": "^2.29.1",
     "canvas-confetti": "^1.9.4",
     "lucide-react": "^1.57.0",
     "next": "16.4.1",
@@ -19,6 +20,7 @@
     "resend": "^6.33.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.12",
     "@tailwindcss/turbopack": "^4",
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^20",
@@ -28,6 +30,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.151.0"
   }
 }
